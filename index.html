@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="bookmark website" />
+    <link rel="icon" href="bookmark.png" />
+    <title>Bookmark java script</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="my-5">
+      <h1
+        class="my-5 position-relative d-inline-block translate-middle-x start-50"
+      >
+        Bookmarker
+      </h1>
+    </header>
+    <main>
+      <section
+        class="add-book-mark mt-5 container p-4 gap-3 d-flex flex-column"
+      >
+        <header class="d-flex align-items-center justify-content-center">
+          <h2 class="fw-semibold">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+        </header>
+        <div class="input-group">
+          <label for="name" class="fw-semibold mb-2 fs-6">
+            <i class="fa-solid fa-book-bookmark"></i>
+            Site Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            placeholder="Bookmark Name"
+            name="site-name"
+            class="form-control w-100 rounded-2"
+          />
+          <p
+            id="alertName"
+            class="mt-2 bg-danger-subtle w-sm-50 me-auto rounded-3 p-2 d-none"
+          >
+            Bookmark Name must be between 3 and 10 letters
+          </p>
+        </div>
+        <div class="input-group">
+          <label for="url" class="fw-semibold mb-2 fs-6">
+            <i class="fa-solid fa-link"></i>
+            Site URL</label
+          >
+          <input
+            type="text"
+            id="urlInput"
+            placeholder="Website URL"
+            class="form-control w-100 rounded-2"
+          />
+          <div class="d-flex flex-column w-100">
+            <p
+              id="alertUrl"
+              class="mt-2 bg-danger-subtle w-sm-50 me-auto rounded-3 p-2 d-none"
+            >
+              Please enter a valid url
+            </p>
+            <p
+              id="alertRepeat"
+              class="mt-2 bg-danger-subtle w-50 me-auto rounded-3 p-2 d-none"
+            >
+              you bookmark this url already
+            </p>
+          </div>
+        </div>
+        <button class="btn btn-submit btn-danger w-auto px-5" id="add-btn">
+          Submit
+        </button>
+        <div
+          class="toast align-items-center text-bg-success border-0 position-absolute"
+          id="alersubmit"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="d-flex">
+            <div class="toast-body">
+              Bookmark added successfully <i class="fa-solid fa-check me-1"></i>
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              id="closeToast"
+            ></button>
+          </div>
+        </div>
+        <button class="btn btn-warning w-auto px-5 d-none" id="edit-btn">
+          Update
+        </button>
+        <div
+          class="toast align-items-center text-bg-success border-0 position-absolute"
+          id="alerUpdate"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="d-flex">
+            <div class="toast-body">
+              Bookmark update successfully
+              <i class="fa-solid fa-check me-1"></i>
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              id="closeToast"
+            ></button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-center mt-4 text-black mb-3">Your Bookmarks:</h2>
+        <div class="container overflow-x-auto">
+          <table class="table w-100 mt-3 text-center" id="table">
+            <thead class="text-center">
+              <tr class="">
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>s
+      </section>
+      <section class="" id="emptySection">
+        <div class="container">
+          <p class="text-center bg-white mx-auto">
+            you don't have any bookmarks
+          </p>
+        </div>
+        
+      </section>
+    </main>
+    <footer class="text-center">
+      Copy Right 2024 &copy; By
+      <a href="https://www.linkedin.com/in/ahmed-abd-elhamid-aa10521b9" target="_blank"
+         >Eng: Ahmed Adolhamed</a
+      >
+      All Rights Reserved
+   </footer>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
